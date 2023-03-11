@@ -1,0 +1,128 @@
+
+
+/* Main Layout */
+
+body{
+    color: #252525;
+    background-color: #252525;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    border: 1px solid red;
+    width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+
+/* Fonts */
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h1, h2{
+    font-weight: 700;
+}
+
+.habit-text{
+    font-weight: 700;
+    font-size: 20px;
+    margin: auto;
+}
+
+.caption{
+    font-size: 20px;
+    font-weight: 700;
+    color: whitesmoke;
+}
+
+
+/* Colors & Layout  */
+
+.first-section{
+    background-color: #AF3E4D;
+    display: flex;
+    position: relative;
+}
+
+.second-section{
+    background-color: #84ab4e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-section{
+    background-color: whitesmoke;
+}
+
+
+
+/* Icons */
+
+.rabbit-icon{
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #252525;
+    background-color: #84ab4e;
+}
+
+.logo{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.habit-container{
+    display: flex;
+}
+
+.calendar-container{
+    display: flex;
+    gap: 20px;
+}
+
+.date{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    align-self: center;
+    /* position: relative;
+    top: 375px;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+} 
+
+.calendar-icon{
+    width: 70px;
+    height: 70px;
+    background-color: #84ab4e;
+}
+
+
+
+/* Buttons & Links */
+
+button{
+    background-color: #AF3E4D;
+    border-radius: 10%;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: #a1626b;
+}
+
