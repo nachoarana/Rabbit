@@ -9,7 +9,7 @@
         <header>
             <div class="first-section container">
                 <div class="title">
-                    <h1>Welcome to Rabbit!</h1>
+                    <h1>Welcome to Rabbit</h1>
                     <p class="caption">Track your habits like a rabbit!</p>
                 </div>
                 <div class="logo">
@@ -21,7 +21,7 @@
             <div class="second-section container">
                 <div class="calendar-container">
                     <img class="calendar-icon" src="Images/calendar-icon-png-4122.png" alt="calendar icon">
-                    <p class="date" id="current-date">Today is</p>
+                    <p class="date" id="current-date"></p>
                 </div>
             </div>
         </section>
@@ -39,9 +39,19 @@
                 <p class="habit-text">Journal entry  >></p>
                 <button type="button" id="switch-btn3">Pending</button>
                </div>
-
+               <div class="habit-container custom-habit" id="custom-habit">
+                <p class="habit-text" id="custom-habit-text">Custom habit  >></p>
+                <button type="button" id="switch-btn-custom">Pending</button>
+               </div>
+               <button type="button" id="add-habit-btn">Add your own habit!</button>
             </div>
         </section>
+        <div class="container add-habit-container" id="add-habit-modal">
+            <h2>Custom habit</h2>
+            <p>Add a specific habit of your own that you'd like to track on a daily basis</p>
+            <input type="text" id="custom-habit-input" placeholder="type your habit here">
+            <button type="submit" id="submit-custom-habit-btn">Submit</button>
+        </div>
         
         <script type="text/javascript" src="index.js"></script>
     </body>

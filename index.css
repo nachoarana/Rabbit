@@ -83,6 +83,7 @@ h1, h2{
 
 .habit-container{
     display: flex;
+    margin-top: 15px;
 }
 
 .calendar-container{
@@ -108,6 +109,27 @@ h1, h2{
     background-color: #84ab4e;
 }
 
+.custom-habit{
+    display: none;
+}
+
+.add-habit-container{
+    /* position: fixed;
+    top: 200px;
+    left: 580px; */
+    display: none;
+    background-color: #252525;
+    color: whitesmoke;
+    /* box-shadow: 5px whitesmoke; */
+    border: 5px solid #AF3E4D;
+}
+
+.add-habit-container input, .add-habit-container button{
+    width: inherit;
+    padding: 10px;
+}
+
+
 
 
 /* Buttons & Links */
@@ -125,4 +147,6 @@ button{
 button:hover{
     background-color: #a1626b;
 }
+
+
 
