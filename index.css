@@ -1,6 +1,4 @@
-
-
-/* Main Layout */
+/* Layout */
 
 body{
     color: #252525;
@@ -10,14 +8,12 @@ body{
 }
 
 .container{
-    border: 1px solid red;
-    width: 500px;
+    /* border: 1px solid red; */
+    width: 450px;
     margin: 20px auto;
     padding: 30px;
     border-radius: 20px;
 }
-
-
 
 /* Fonts */
 
@@ -29,19 +25,17 @@ h2{
     font-size: 30px;
 }
 
-h1, h2{
+h1, h2, .habit-text, .caption{
     font-weight: 700;
 }
 
 .habit-text{
-    font-weight: 700;
     font-size: 20px;
     margin: auto;
 }
 
 .caption{
     font-size: 20px;
-    font-weight: 700;
     color: whitesmoke;
 }
 
@@ -51,17 +45,66 @@ h1, h2{
 .first-section{
     background-color: #AF3E4D;
     display: flex;
-    position: relative;
+    position: relative; 
 }
 
 .second-section{
     background-color: #84ab4e;
-    display: flex;
-    justify-content: space-between;
 }
 
 .third-section{
     background-color: whitesmoke;
+}
+
+.select-title{
+    margin-top: 0;
+}
+
+.habit-picker{
+    background-color: rgb(162, 162, 162);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.habit-container{
+    display: flex;
+    margin-top: 15px;
+}
+
+.calendar-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.custom-habit{
+    display: none;
+}
+
+.add-habit-container{
+    display: none;
+    background-color: #252525;
+    color: whitesmoke;
+    border: 5px solid #AF3E4D;
+}
+
+.add-habit-container input, .add-habit-container button{
+    width: inherit;
+    padding: 10px;
+}
+
+.modal-tip{
+    /* display: none; */
+    color: whitesmoke;
+    background-color: #252525;
+    box-shadow: whitesmoke;
+    position: relative;
+    margin: auto;
+}
+
+.inspiration{
+    display: block;
+    margin-top: 10px;
 }
 
 
@@ -69,7 +112,7 @@ h1, h2{
 /* Icons */
 
 .rabbit-icon{
-    width: 100px;
+    width: 80px;
     border-radius: 50%;
     border: 2px solid #252525;
     background-color: #84ab4e;
@@ -81,26 +124,11 @@ h1, h2{
     right: 20px;
 }
 
-.habit-container{
-    display: flex;
-    margin-top: 15px;
-}
-
-.calendar-container{
-    display: flex;
-    gap: 20px;
-}
-
 .date{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0;
     align-self: center;
-    /* position: relative;
-    top: 375px;
-    bottom: 0;
-    left: 0;
-    right: 0; */
 } 
 
 .calendar-icon{
@@ -108,28 +136,6 @@ h1, h2{
     height: 70px;
     background-color: #84ab4e;
 }
-
-.custom-habit{
-    display: none;
-}
-
-.add-habit-container{
-    /* position: fixed;
-    top: 200px;
-    left: 580px; */
-    display: none;
-    background-color: #252525;
-    color: whitesmoke;
-    /* box-shadow: 5px whitesmoke; */
-    border: 5px solid #AF3E4D;
-}
-
-.add-habit-container input, .add-habit-container button{
-    width: inherit;
-    padding: 10px;
-}
-
-
 
 
 /* Buttons & Links */
@@ -147,6 +153,29 @@ button{
 button:hover{
     background-color: #a1626b;
 }
+
+.add-habit-btn{
+    margin-top: 20px;
+}
+
+.picker{
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+    color: whitesmoke;
+    border: none;
+}
+
+.custom-picker{
+    color: black;
+
+}
+
+.picker:hover, .picker:focus{
+    border: 1px solid #252525;
+}
+
 
 
 

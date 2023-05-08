@@ -7,7 +7,7 @@
     </head>
     <body>
         <header>
-            <div class="first-section container">
+            <div class="first-section container main">
                 <div class="title">
                     <h1>Welcome to Rabbit</h1>
                     <p class="caption">Track your habits like a rabbit!</p>
@@ -18,32 +18,27 @@
             </div>
         </header>
         <section>
-            <div class="second-section container">
-                <div class="calendar-container">
-                    <img class="calendar-icon" src="Images/calendar-icon-png-4122.png" alt="calendar icon">
-                    <p class="date" id="current-date"></p>
+            <div class="pick-modal container main third-section">
+                <h3 class="select-title">Select up to 5 daily habits</h3>
+                <div class="habit-picker" id="habit-picker">
                 </div>
             </div>
         </section>
         <section>
-            <div class="third-section container">
-               <div class="habit-container">
-                <p class="habit-text">30 min exercise  >></p>
-                <button type="button" id="habit-btn1">Pending</button>
-               </div>
-               <div class="habit-container">
-                <p class="habit-text">Eating healthy  >></p>
-                <button type="button" id="switch-btn2">Pending</button>
-               </div>               
-               <div class="habit-container">
-                <p class="habit-text">Journal entry  >></p>
-                <button type="button" id="switch-btn3">Pending</button>
-               </div>
-               <div class="habit-container custom-habit" id="custom-habit">
-                <p class="habit-text" id="custom-habit-text">Custom habit  >></p>
-                <button type="button" id="switch-btn-custom">Pending</button>
-               </div>
-               <button type="button" id="add-habit-btn">Add your own habit!</button>
+            <div class="second-section container main">
+                <div class="calendar-container" id="calendar-container">
+                    <img class="calendar-icon" src="Images/calendar-icon-png-4122.png" alt="calendar icon">
+                    <p class="date" id="current-date"></p>
+                    <!-- <p class="date" id="current-score"></p>     -->
+                </div>
+                <a href="#" class="inspiration">Need inspiration?</a>
+                <div class="modal-tips" id="modal-tips"></div>
+            </div>
+        </section>
+        <section>
+            <div class="third-section container main" id="habit-repository">
+               <h2>Your daily habits</h2>
+               <h3 id="empty-repository">{no habits yet}</h3>
             </div>
         </section>
         <div class="container add-habit-container" id="add-habit-modal">
@@ -53,6 +48,6 @@
             <button type="submit" id="submit-custom-habit-btn">Submit</button>
         </div>
         
-        <script type="text/javascript" src="index.js"></script>
+        <script src="index.js" type="module"></script>
     </body>
 </html>
