@@ -1,18 +1,29 @@
 /* Layout */
 
 body{
-    color: #252525;
-    background-color: #252525;
+    color: #161748;
+    background-color: #161748;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .container{
-    border: 1px solid red;
     width: 450px;
     margin: 20px auto;
     padding: 30px;
     border-radius: 20px;
+}
+
+.previa{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.progress{
+    border-radius: 40px;
+    padding: 5px 20px;
+    width: 40%;
 }
 
 /* Fonts */
@@ -25,155 +36,72 @@ h2{
     font-size: 30px;
 }
 
-h1, h2, .habit-text, .caption{
+h1, h2{
     font-weight: 700;
 }
 
-.habit-text{
-    font-size: 20px;
-    margin: auto;
-}
-
-.caption{
+.fecha-hoy, .semana-hoy{
     font-size: 20px;
     color: whitesmoke;
+}
+
+.progress-top{
+    font-weight: bold;
 }
 
 
 /* Colors & Layout  */
 
-.first-section{
-    background-color: #AF3E4D;
-    display: flex;
-    position: relative; 
+.intro{
+    background-color: #478559;
 }
 
-.second-section{
-    background-color: #84ab4e;
-}
-
-.third-section{
+.positiva{
     background-color: whitesmoke;
 }
 
-.select-title{
-    margin-top: 0;
+.negativa{
+    background-color: #39a0ca;
 }
 
-.habit-picker{
-    background-color: rgb(162, 162, 162);
-    border-radius: 20px;
-    padding: 10px;
+.titulo{
+    text-align: center;
 }
 
-.habit-container{
-    display: flex;
-    margin-top: 15px;
+.fin{
+    background-color: #39a0ca;
 }
 
-.calendar-container{
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+.progress{
+    background-color: whitesmoke;
 }
 
-.custom-habit{
-    display: none;
-}
-
-.add-habit-container{
-    display: none;
-    background-color: #252525;
-    color: whitesmoke;
-    border: 5px solid #AF3E4D;
-}
-
-.add-habit-container input, .add-habit-container button{
-    width: inherit;
-    padding: 10px;
-}
-
-.modal-tip{
-    /* display: none; */
-    color: whitesmoke;
-    background-color: #252525;
-    box-shadow: whitesmoke;
-    position: relative;
-    margin: auto;
-}
-
-.inspiration{
-    display: block;
-    margin-top: 10px;
-}
-
-
-
-/* Icons */
-
-.rabbit-icon{
-    width: 80px;
-    border-radius: 50%;
-    border: 2px solid #252525;
-    background-color: #84ab4e;
-}
-
-.logo{
-    position: absolute;
-    top: 30px;
-    right: 20px;
-}
-
-.date{
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
-    align-self: center;
-} 
-
-.calendar-icon{
-    width: 70px;
-    height: 70px;
-    background-color: #84ab4e;
-}
 
 
 /* Buttons & Links */
 
 button{
-    background-color: #AF3E4D;
-    border-radius: 10%;
+    background-color: #f95d9b;
+    color: whitesmoke;
+    border-radius: 60px;
+    width: 60%;
     border: 2px solid black;
     cursor: pointer;
-    padding: 8px 15px;
-    margin: 5px;
+    padding: 15px;
     font-size: 20px;
 }
 
 button:hover{
-    background-color: #a1626b;
+    background-color: #fa8eb9;
 }
 
-.add-habit-btn{
-    margin-top: 20px;
+li{
+    list-style: none;
+    margin-left: 0;
 }
 
-.picker{
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 5px;
-    font-size: 14px;
-    color: whitesmoke;
-    border: none;
-}
-
-.custom-picker{
-    color: black;
-
-}
-
-.picker:hover, .picker:focus{
-    border: 1px solid #252525;
+ul{
+    padding-inline-start: 0;    
 }
 
 

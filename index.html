@@ -6,47 +6,40 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="first-section container main">
-                <div class="title">
-                    <h1>Welcome to Rabbit</h1>
-                    <p class="caption">Track your habits like a rabbit!</p>
-                </div>
-                <div class="logo">
-                    <img class="rabbit-icon" src="Images/rabbit_tp.png" alt="Rabbit logo">
-                </div>  
-            </div>
-        </header>
         <section>
-            <div class="pick-modal container main third-section">
-                <h3 class="select-title">Select up to 5 daily habits</h3>
-                <div class="habit-picker" id="habit-picker">
+            <div class="previa container">
+                <div class="progress previa-semana" id="progress-week">
+                </div>
+                <div class="progress previa-dia" id="progress-day">
+                </div>        
+            </div>
+        </section>
+        <section>
+            <div class="intro container">
+                <div class="titulo" id="salute">
                 </div>
             </div>
         </section>
         <section>
-            <div class="second-section container main">
-                <div class="calendar-container" id="calendar-container">
-                    <img class="calendar-icon" src="Images/calendar-icon-png-4122.png" alt="calendar icon">
-                    <p class="date" id="current-date"></p>
-                    <!-- <p class="date" id="current-score"></p>     -->
-                </div>
-                <a href="#" class="inspiration">Need inspiration?</a>
-                <div class="modal-tips" id="modal-tips"></div>
+            <div class="caja-habitos positiva container">
+               <h2>Alimentacion</h2>
+               <li>
+                    <ul><button>Buen almuerzo</button></ul>
+                    <ul><button>Desayuno en regla</button></ul>
+                    <ul><button>Merienda en orden</button></ul>
+                    <ul><button>Cena saludable</button></ul>
+                    <ul><button>Sin picaditas</button></ul>
+               </li>
+
+            </div>
+            <div class="caja-habitos negativa container">
+                <h2>Ejercicio</h2>
+                <li>
+                    <ul><button>Cardio</button></ul>
+                    <ul><button>Peso</button></ul>
+               </li>
             </div>
         </section>
-        <section>
-            <div class="third-section container main" id="habit-repository">
-               <h2>Your daily habits</h2>
-               <h3 id="empty-repository">{no habits yet}</h3>
-            </div>
-        </section>
-        <div class="container add-habit-container" id="add-habit-modal">
-            <h2>Custom habit</h2>
-            <p>Add a specific habit of your own that you'd like to track on a daily basis</p>
-            <input type="text" id="custom-habit-input" placeholder="type your habit here">
-            <button type="submit" id="submit-custom-habit-btn">Submit</button>
-        </div>
         
         <script src="index.js" type="module"></script>
     </body>

@@ -1,93 +1,85 @@
-import {habits} from './data.js'
+// Variables calculo dias y semanas
+let dailyScore = 0
+let weekCount = 35 // hardcoded por ahora
+let dailyCompleted = 0
 
-const currentDate = document.getElementById('current-date')
-const addHabitModal = document.getElementById('add-habit-modal')
-const customHabitText = document.getElementById('custom-habit-text')
-const habitPicker = document.getElementById('habit-picker')
+// Cambia color al clickear boton y agrega kudos
 
+let actionButtons = document.querySelectorAll('button');
+const kudos = ["🎉 genial! 🎉", "🤗 ahhh que bien!! 🤗", '🏆 IM PE CA BLE 🏆', "💫 maravilloso! 💫"]
 
-// Toma los names del array habit y los renderiza como botones
+actionButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Guardar el texto original del botón
+      let originalText = button.innerText;
+      
+    // Seleccionar un elemento aleatorio del array kudos
+    let randomIndex = Math.floor(Math.random() * kudos.length);
+    let randomKudo = kudos[randomIndex];
 
- function renderHabitButtons(){
-    
-    for (let habit of habits) {
-        habitPicker.innerHTML += `
-        <button class="picker" id="picker-${habit.id}" data-button="${habit.name}">${habit.name}</button>     `       
-    }
-        habitPicker.innerHTML += `
-        <button class="picker custom-picker" id="add-habit-btn">custom habit</button> ` 
- }
+    // Cambiar el texto del botón al kudo aleatorio
+    button.innerText = randomKudo;
+      
+      // Cambiar el color de fondo del botón
+      button.style.backgroundColor = '#478559';
+  
+      // Después de 3 segundos, volver al texto original y al color original
+      setTimeout(function() {
+        button.innerText = originalText;
+      }, 1000);
 
-renderHabitButtons()
+      
+      // Suma un punto por habito cumplido y recalcula dailyCompleted
+      dailyScore++
+      dailyCompleted = Math.round((dailyScore * 100) / 7)
 
-// Click en habit picker, se agrega a la lista
+      //Recalcula progresos
+      getProgress()
 
-habitPicker.addEventListener('click', function(e){
-    if ((e.target.dataset.button)){
-    renderSelectedHabit(e.target.dataset.button)
-    }})
+      // Deshabilita boton
+      button.disabled = true;
+      
+    });
+  });
 
+// Toma y renderiza la fecha de hoy
 
-function renderSelectedHabit(habitName){
-    const targetObject = habits.filter(function(target){
-        return target.name === habitName
-    })[0]
-        // document.getElementById("empty-repository").display.style = "none"
-        document.getElementById("habit-repository").innerHTML += `
-            <div class="habit-container">
-            <p class="habit-text">${targetObject.name}
-            <button type="button" id="habit-btn1">Pending</button>
-        </div>
-        `
-}
-
-
-// Gets current date
-
-let date = new Date();
-
-let day = date.getDate();
-let month = date.getMonth() + 1;
-let year = date.getFullYear();
 let user = "Nacho"
 
-currentDate.innerHTML = `Hi ${user}! Today is ${day}-${month} <br>
-                        Day 4 of week 5
-`;
+const meses = [
+  "enero", "febrero", "marzo", "abril", "mayo", "junio",
+  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+];
 
-// PENDIENTE switch daily habit to complete / pending
+let date = new Date()
+let day = date.getDate();
+let month = meses[date.getMonth()]; // Obtener el nombre del mes en español
+let year = date.getFullYear();
 
-// habitBtn1.addEventListener('click', function(){
-//     habitBtn1.style.backgroundColor = '#84ab4e';
-//     habitBtn1.textContent = 'Done!';
+const greeting = document.getElementById('salute')
+greeting.innerHTML = `
+  <h1>Hola ${user}!</h1>
+  <p class="fecha-hoy">Hoy es ${day} de ${month}</p>
+  <p class="semana-hoy">Semana #${weekCount}</p>  
+  `;
 
-//    })
+  // Logica progress
 
-// habitBtn1.addEventListener('dblclick', function(){
-//     habitBtn1.style.backgroundColor = '#AF3E4D'
-//     habitBtn1.textContent = 'Pending'
+  function getProgress(){
 
+    let progresoSemanal = Math.round((dailyScore * 100) / 49)
+    const progressWeek = document.getElementById('progress-week')
+    progressWeek.innerHTML =
+      `
+      <p class='progress-top'>Semana al ${progresoSemanal}% </p>  
+    `
 
+    const progressDay = document.getElementById('progress-day')
+    progressDay.innerHTML =
+      `
+      <p class='progress-top'>Dia al ${dailyCompleted}% </p>  
+    `
 
-// Show custom habit modal, hide rest
-document.getElementById("add-habit-btn").addEventListener('click', function(){
-    addHabitModal.style.display = 'block'
-    const allMain = document.getElementsByClassName('main')
-    for (let all of allMain){
-        all.style.display = "none"
-    }
-})
+  }
 
-submitCustomHabitBtn.addEventListener('click', function(){
-    let customInput = document.getElementById('custom-habit-input').value
-    console.log(customInput)
-    addHabitModal.style.display = 'none'
-    document.getElementById('custom-habit').style.display = 'flex'
-    customHabitText.innerHTML = `${customInput} >>`
-    addHabitBtn.style.display = 'none' 
-    const allMain = document.getElementsByClassName('main')
-    for (let all of allMain){
-        all.style.display = "block"
-    }
-})
-
+  getProgress()
